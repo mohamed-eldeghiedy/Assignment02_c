@@ -307,8 +307,46 @@
 
 
 
+            //Console.Write("Enter number of elements in the array: ");
+            //int size = int.Parse(Console.ReadLine()!);
+
+            //int[] arr = new int[size];
+
+            //Console.WriteLine("Enter the elements of the array:");
+            //for (int i = 0; i < size; i++)
+            //{
+            //    Console.Write("Element " + (i + 1) + ": ");
+            //    arr[i] = int.Parse(Console.ReadLine()!);
+            //}
+
+            //int max = arr[0];
+            //int min = arr[0];
+
+            //for (int i = 1; i < size; i++)
+            //{
+            //    if (arr[i] > max)
+            //        max = arr[i];
+
+            //    if (arr[i] < min)
+            //        min = arr[i];
+            //}
+
+            //Console.WriteLine("Maximum = " + max);
+            //Console.WriteLine("Minimum = " + min);
+
+            #endregion
+
+
+            #region p16:Write a program in C# Sharp to find the second largest element in an array
+
             Console.Write("Enter number of elements in the array: ");
             int size = int.Parse(Console.ReadLine()!);
+
+            if (size < 2)
+            {
+                Console.WriteLine("Array must contain at least two elements.");
+                return;
+            }
 
             int[] arr = new int[size];
 
@@ -319,20 +357,26 @@
                 arr[i] = int.Parse(Console.ReadLine()!);
             }
 
-            int max = arr[0];
-            int min = arr[0];
+            int largest = int.MinValue;
+            int sec_Largest = int.MinValue;
 
-            for (int i = 1; i < size; i++)
+            for (int i = 0; i < size; i++)
             {
-                if (arr[i] > max)
-                    max = arr[i];
-
-                if (arr[i] < min)
-                    min = arr[i];
+                if (arr[i] > largest)
+                {
+                    sec_Largest = largest;
+                    largest = arr[i];
+                }
+                else if (arr[i] > sec_Largest && arr[i] != largest)
+                {
+                    sec_Largest = arr[i];
+                }
             }
 
-            Console.WriteLine("Maximum = " + max);
-            Console.WriteLine("Minimum = " + min);
+            if (sec_Largest == int.MinValue)
+                Console.WriteLine("There is no distinct second largest element.");
+            else
+                Console.WriteLine("Second largest element is: " + sec_Largest);
 
             #endregion
         }
