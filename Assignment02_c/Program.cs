@@ -263,12 +263,54 @@
             #region p14:Write a program in C# Sharp to count the frequency of each element of an array.
 
 
+            //Console.Write("Enter number of elements in the array: ");
+            //int size = int.Parse(Console.ReadLine()!);
+
+            //int[] arr = new int[size];
+            //int[] freq = new int[size];
+            //int st = -1;
+
+            //Console.WriteLine("Enter the elements of the array:");
+            //for (int i = 0; i < size; i++)
+            //{
+            //    Console.Write("Element " + (i + 1) + ": ");
+            //    arr[i] = int.Parse(Console.ReadLine()!);
+            //}
+
+            //for (int i = 0; i < size; i++)
+            //{
+            //    int count = 1;
+            //    for (int j = i + 1; j < size; j++)
+            //    {
+            //        if (arr[i] == arr[j])
+            //        {
+            //            count++;
+            //            freq[j] = st; 
+            //        }
+            //    }
+
+            //    if (freq[i] != st)
+            //        freq[i] = count;
+            //}
+
+            //Console.WriteLine("\nFrequency of each element:");
+            //for (int i = 0; i < size; i++)
+            //{
+            //    if (freq[i] != st)
+            //        Console.WriteLine(arr[i] + " occurs " + freq[i] + " time(s)");
+            //}
+
+            #endregion
+
+
+            #region p15:Write a program in C# Sharp to find maximum and minimum element in an array
+
+
+
             Console.Write("Enter number of elements in the array: ");
             int size = int.Parse(Console.ReadLine()!);
 
             int[] arr = new int[size];
-            int[] freq = new int[size];
-            int st = -1;
 
             Console.WriteLine("Enter the elements of the array:");
             for (int i = 0; i < size; i++)
@@ -277,28 +319,20 @@
                 arr[i] = int.Parse(Console.ReadLine()!);
             }
 
-            for (int i = 0; i < size; i++)
-            {
-                int count = 1;
-                for (int j = i + 1; j < size; j++)
-                {
-                    if (arr[i] == arr[j])
-                    {
-                        count++;
-                        freq[j] = st; 
-                    }
-                }
+            int max = arr[0];
+            int min = arr[0];
 
-                if (freq[i] != st)
-                    freq[i] = count;
+            for (int i = 1; i < size; i++)
+            {
+                if (arr[i] > max)
+                    max = arr[i];
+
+                if (arr[i] < min)
+                    min = arr[i];
             }
 
-            Console.WriteLine("\nFrequency of each element:");
-            for (int i = 0; i < size; i++)
-            {
-                if (freq[i] != st)
-                    Console.WriteLine(arr[i] + " occurs " + freq[i] + " time(s)");
-            }
+            Console.WriteLine("Maximum = " + max);
+            Console.WriteLine("Minimum = " + min);
 
             #endregion
         }
