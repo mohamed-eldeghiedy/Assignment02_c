@@ -106,14 +106,29 @@
 
             #region p7:Write a program that allows the user to insert an integer then print a multiplication table up to 12.
 
-            Console.WriteLine(" Enter Number :");
-            int num_mlt = int.Parse(Console.ReadLine()!);
-            Console.WriteLine();
+            //Console.WriteLine(" Enter Number :");
+            //int num_mlt = int.Parse(Console.ReadLine()!);
+            //Console.WriteLine();
 
-            for (int i = 1; i <= 12; i++)
-            {
-                Console.WriteLine(i*num_mlt);
-            }
+            //for (int i = 1; i <= 12; i++)
+            //{
+            //    Console.WriteLine(i*num_mlt);
+            //}
+            #endregion
+
+
+            #region p8:Write a program that allows to user to insert number then print all even numbers between 1 to this number
+
+            //Console.WriteLine("Enter Number : ");
+            //int num_even = int.Parse(Console.ReadLine()!);
+
+            //for (int i = 1; i < num_even; i++)
+            //{
+            //    if (i % 2 == 0)
+            //        Console.WriteLine(i + " , ");
+
+            //    Console.WriteLine();
+            //}
             #endregion
         }
     }
