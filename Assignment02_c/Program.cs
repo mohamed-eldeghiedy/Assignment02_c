@@ -146,6 +146,33 @@
 
 
             #endregion
+
+
+            #region p10:Write a program to enter marks of five subjects and calculate total, average and percentage.
+
+            int[] marks = new int[5];
+            int total = 0;
+
+            Console.WriteLine("Enter Marks of Five Subjects: ");
+
+            for (int i = 0; i < 5; i++) 
+            {
+               Console.Write( "Subject "+(i+1) + " :");
+                marks[i] = int.Parse(Console.ReadLine()!);
+
+                total += marks[i];
+            }
+
+            double avr = total / 0.5;
+            double perc = (total / 500.0) * 100;
+
+
+            Console.WriteLine("Total Marks = "+total);
+            Console.WriteLine("Average Marks = " + (int)avr);
+            Console.WriteLine("Percentage = " + (int)perc);
+
+
+            #endregion
         }
     }
 }
