@@ -239,28 +239,69 @@
             #region p13:Write a program in C# Sharp to find the sum of all elements of the array.
 
 
-            Console.Write("Enter the number of elements in the array: ");
+            //    Console.Write("Enter the number of elements in the array: ");
+            //    int size = int.Parse(Console.ReadLine()!);
+
+            //    int[] arr = new int[size];
+            //    int sum = 0;
+
+            //    Console.WriteLine("Enter the elements of the array:");
+
+            //    for (int i = 0; i < size; i++)
+            //    {
+            //        Console.Write("Element " + (i + 1) + ": ");
+            //        arr[i] = int.Parse(Console.ReadLine()!);
+            //        sum += arr[i];
+            //    }
+
+            //    Console.WriteLine("Sum of all elements = " + sum);
+            //}
+
+            #endregion
+
+
+            #region p14:Write a program in C# Sharp to count the frequency of each element of an array.
+
+
+            Console.Write("Enter number of elements in the array: ");
             int size = int.Parse(Console.ReadLine()!);
 
             int[] arr = new int[size];
-            int sum = 0;
+            int[] freq = new int[size];
+            int st = -1;
 
             Console.WriteLine("Enter the elements of the array:");
-
             for (int i = 0; i < size; i++)
             {
                 Console.Write("Element " + (i + 1) + ": ");
                 arr[i] = int.Parse(Console.ReadLine()!);
-                sum += arr[i];
             }
 
-            Console.WriteLine("Sum of all elements = " + sum);
+            for (int i = 0; i < size; i++)
+            {
+                int count = 1;
+                for (int j = i + 1; j < size; j++)
+                {
+                    if (arr[i] == arr[j])
+                    {
+                        count++;
+                        freq[j] = st; 
+                    }
+                }
+
+                if (freq[i] != st)
+                    freq[i] = count;
+            }
+
+            Console.WriteLine("\nFrequency of each element:");
+            for (int i = 0; i < size; i++)
+            {
+                if (freq[i] != st)
+                    Console.WriteLine(arr[i] + " occurs " + freq[i] + " time(s)");
+            }
+
+            #endregion
         }
-
-        #endregion
-
-
-
 
     }
     
