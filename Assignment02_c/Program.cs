@@ -150,29 +150,85 @@
 
             #region p10:Write a program to enter marks of five subjects and calculate total, average and percentage.
 
-            int[] marks = new int[5];
-            int total = 0;
+            //int[] marks = new int[5];
+            //int total = 0;
 
-            Console.WriteLine("Enter Marks of Five Subjects: ");
+            //Console.WriteLine("Enter Marks of Five Subjects: ");
 
-            for (int i = 0; i < 5; i++) 
-            {
-               Console.Write( "Subject "+(i+1) + " :");
-                marks[i] = int.Parse(Console.ReadLine()!);
+            //for (int i = 0; i < 5; i++) 
+            //{
+            //   Console.Write( "Subject "+(i+1) + " :");
+            //    marks[i] = int.Parse(Console.ReadLine()!);
 
-                total += marks[i];
-            }
+            //    total += marks[i];
+            //}
 
-            double avr = total / 0.5;
-            double perc = (total / 500.0) * 100;
+            //double avr = total / 0.5;
+            //double perc = (total / 500.0) * 100;
 
 
-            Console.WriteLine("Total Marks = "+total);
-            Console.WriteLine("Average Marks = " + (int)avr);
-            Console.WriteLine("Percentage = " + (int)perc);
+            //Console.WriteLine("Total Marks = "+total);
+            //Console.WriteLine("Average Marks = " + (int)avr);
+            //Console.WriteLine("Percentage = " + (int)perc);
 
 
             #endregion
+
+
+
+            #region p11:Write a program to input the month number and print the number of days in that month.
+
+
+            Console.WriteLine( " Month Number :");
+
+            int month_num = int.Parse( Console.ReadLine()!);
+
+
+            switch (month_num)
+            {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    Console.WriteLine("31 days");
+                    break;
+
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    Console.WriteLine("30 days");
+                    break;
+
+                case 2:
+                    Console.WriteLine("28 or 29 days");
+                    break;
+
+                default:
+                    Console.WriteLine("Invalid month number.");
+                    break;
+            }
+
+
+            #endregion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         }
     }
 }
