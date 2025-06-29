@@ -54,6 +54,39 @@
             //Console.WriteLine("Min Number : " + MIN);
             //Console.WriteLine("Max Number : " + Max);
             #endregion
+
+
+            #region p4:Write a program that allows the user to insert an integer number then check If a number is even or odd.
+
+            //Console.WriteLine("Enter Number : ");
+            //int Num = int.Parse(Console.ReadLine()!);
+
+            //if (Num % 2 == 0)
+            //{
+            //    Console.WriteLine("the number is even");
+            //}
+            //else {
+            //    Console.WriteLine("the number is odd");
+            //}
+
+            #endregion
+
+
+            #region p5:Write a program that takes character from the user then if it is a vowel chars (a,e,I,o,u) then print (vowel) otherwise print (consonant).
+
+
+            Console.WriteLine(" Enter a character : ");
+            char ch = char.Parse(Console.ReadLine().ToLower());
+
+            if (ch == 'a' || ch == 'e' || ch == 'o'|| ch == 'u'|| ch == 'i')
+            {
+                Console.WriteLine("vowel");
+            }
+            else 
+            {
+                Console.WriteLine("consonant");
+            }
+            #endregion
         }
     }
 }
