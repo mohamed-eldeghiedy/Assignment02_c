@@ -130,6 +130,22 @@
             //    Console.WriteLine();
             //}
             #endregion
+
+
+            #region p9:Write a program that takes two integers then prints the power.
+
+
+            //Console.WriteLine(" Enter Frist Number :");
+            //int num_1 = int.Parse(Console.ReadLine()!);
+            //Console.WriteLine(" Enter Second Number :");
+            //int num_2 = int.Parse(Console.ReadLine()!);
+
+            //double power = Math.Pow(num_1, num_2);
+
+            //Console.WriteLine("Result : "+power);
+
+
+            #endregion
         }
     }
 }
